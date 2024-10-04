@@ -31,9 +31,13 @@ const  handleToChange = (value: string) => {
       return
     }
   };
-  const airportStrings = flightsData.airports.map(airport => {
+  const airportDataFormat = flightsData.airports.map(airport => {
 
-      return {value:`${airport.name}, ${airport.code}, ${airport.city}, ${airport.country}`}
+      return {
+        label:`${airport.city} (${airport.code}), ${airport.country}`,
+        value:`${airport.city} (${airport.code}), ${airport.country}`,
+      }
+
   }
   );
 
@@ -49,14 +53,14 @@ const  handleToChange = (value: string) => {
   return (
     <div className="flex items-center gap-4 w-[60%]">
       {/* combo box */}
-      <DropDown data={airportStrings} value={fromLocation} onChange={handleFromChange} label="Where from?" />
+      <DropDown data={airportDataFormat} value={fromLocation} onChange={handleFromChange} label="Where from?" />
       <div>
         {/* swap locations */}
         <Button onClick={handleSwap} className="bg-[#F5F7FA] rounded-full hover:bg-[#F5F7FA] size-[3.2rem] p-0">
           <ArrowRightLeft color="black" />
         </Button>
       </div>
-      <DropDown data={airportStrings} value={toLocation} onChange={handleToChange} label="Where to?" />
+      <DropDown data={airportDataFormat} value={toLocation} onChange={handleToChange} label="Where to?" />
     </div>
   );
 };
