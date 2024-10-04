@@ -65,7 +65,7 @@ export const DropDown = ({label,data,value,onChange}:Props) => {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-full justify-between"
+          className="w-full justify-between text-[1rem] text-[#484A4D]"
         >
           {value
             ? data.find((framework) => framework.value === value)?.label
