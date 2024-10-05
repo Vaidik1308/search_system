@@ -1,19 +1,30 @@
-import FlightsCards from '@/components/flghts/FlightsCards'
-import LoaderContainer from '@/components/flghts/LoaderContainer'
-import React, { Suspense } from 'react'
-// import wait from 'wait'
+'use client'
+import React, { useEffect, useState } from 'react';
+import LoaderContainer from '@/components/flghts/LoaderContainer';
+import FlightsCards from '@/components/flghts/FlightsCards'; // Directly import the component
 
-const FlightsPage = async () => {
+const FlightsPage = () => {
+  const [loading, setLoading] = useState(true);
 
-  // await wait(6000)
-  
+  useEffect(() => {
+    // Set a timer for 6 seconds to simulate loading
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+
+    // Cleanup the timer on component unmount
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className='w-full'>
-      <Suspense fallback={<LoaderContainer/>}>
-          <FlightsCards/>
-      </Suspense>
+      {loading ? (
+        <LoaderContainer /> // Show loader for 6 seconds
+      ) : (
+        <FlightsCards /> // Show flight cards after 6 seconds
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default FlightsPage
+export default FlightsPage;
