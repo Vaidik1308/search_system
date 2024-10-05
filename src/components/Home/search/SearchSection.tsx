@@ -1,9 +1,8 @@
 import React from 'react'
 import SearchBox from './SearchBox'
 
-type Props = {}
 
-const SearchSection = (props: Props) => {
+const SearchSection = () => {
   return (
     <section className=' w-full flex flex-col justify-start'>
         <div className='grid grid-cols-3 relative '>

@@ -5,9 +5,8 @@ import { ArrowRightLeft } from "lucide-react";
 import React, { useState } from "react";
 import flightsData from '@/lib/db.json'
 
-type Props = {};
 
-const DropdownSection = (props: Props) => {
+const DropdownSection = () => {
   const [fromLocation, setFromLocation] = useState("");
   const [toLocation, setToLocation] = useState("");
   
@@ -16,7 +15,6 @@ const DropdownSection = (props: Props) => {
     console.log(value); 
     
     setFromLocation(value);
-    // Reset toLocation if it matches fromLocation
     if (value === toLocation) {
       setToLocation("");
       return

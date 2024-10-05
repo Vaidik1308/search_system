@@ -6,9 +6,8 @@ import DropdownSection from './DropdownSection'
 import DatePickerSection from './DatePickerSection'
 import { useRouter } from 'next/navigation'
 
-type Props = {}
 
-const SearchBox = (props: Props) => {
+const SearchBox = () => {
   const router = useRouter()
   return (
     <div className='flex flex-col gap-8'>
