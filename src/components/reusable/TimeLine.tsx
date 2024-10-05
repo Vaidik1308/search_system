@@ -2,9 +2,8 @@ import { Circle, Clock4 } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
 
-type Props = {}
 
-const TimeLine = (props: Props) => {
+const TimeLine = () => {
   return (
     <div className='my-5 flex flex-col gap-1'>
         <div className=' flex items-center gap-3'>

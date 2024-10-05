@@ -1,13 +1,8 @@
 'use client'
 import * as React from "react";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
 import { Check } from "lucide-react";
@@ -15,7 +10,7 @@ import { ClipLoader } from "react-spinners";
 
 export const CardComp = () => {
   const [loading, setLoading] = React.useState(true);
-  const [ticks, setTicks] = React.useState([false, false, false]); // Array to track which ticks are shown
+  const [ticks, setTicks] = React.useState([false, false, false]);
 
   React.useEffect(() => {
     const tickInterval = setInterval(() => {
@@ -23,17 +18,16 @@ export const CardComp = () => {
         const nextTicks = [...prevTicks];
         const nextIndex = nextTicks.indexOf(false);
         if (nextIndex !== -1) {
-          nextTicks[nextIndex] = true; // Show the next tick
+          nextTicks[nextIndex] = true;
         }
         return nextTicks;
       });
-    }, 1000); // Change this value to adjust the tick interval
+    }, 1000); 
 
-    // Stop the interval after all ticks are shown
     const loadingTimeout = setTimeout(() => {
       clearInterval(tickInterval);
-      setLoading(false); // Set loading to false after all ticks are shown
-    }, 4000); // Total time for loading (3 ticks * 1000ms)
+      setLoading(false); 
+    }, 4000); 
 
     return () => {
       clearInterval(tickInterval);

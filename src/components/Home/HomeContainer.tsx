@@ -1,9 +1,8 @@
 import React from 'react'
 import SearchSection from './search/SearchSection'
 
-type Props = {}
 
-const HomeContainer = (props: Props) => {
+const HomeContainer = () => {
   return (
     <div className='px-5 w-[95%] mx-auto md:w-[75%] mx-auto'>
         <SearchSection/>

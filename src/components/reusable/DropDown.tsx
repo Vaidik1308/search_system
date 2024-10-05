@@ -12,7 +12,6 @@ type Props = {
     onChange?: (value: string) => void;
     value:string;
 }
-//   // ... existing code ...
 import { Check, ChevronDown } from "lucide-react"
 
 import { cn } from "@/lib/utils"
@@ -31,28 +30,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 
-const frameworks = [
-  {
-    value: "next.js",
-    label: "Next.js",
-  },
-  {
-    value: "sveltekit",
-    label: "SvelteKit",
-  },
-  {
-    value: "nuxt.js",
-    label: "Nuxt.js",
-  },
-  {
-    value: "remix",
-    label: "Remix",
-  },
-  {
-    value: "astro",
-    label: "Astro",
-  },
-]
+
 
 export const DropDown = ({label,data,value,onChange}:Props) => {
   const [open, setOpen] = React.useState(false)

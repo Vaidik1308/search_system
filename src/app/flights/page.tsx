@@ -1,14 +1,17 @@
 import FlightsCards from '@/components/flghts/FlightsCards'
-import React from 'react'
-import wait from 'wait'
+import LoaderContainer from '@/components/flghts/LoaderContainer'
+import React, { Suspense } from 'react'
+// import wait from 'wait'
 
 const FlightsPage = async () => {
 
   // await wait(6000)
   
   return (
-    <div>
-        <FlightsCards/>
+    <div className='w-full'>
+      <Suspense fallback={<LoaderContainer/>}>
+          <FlightsCards/>
+      </Suspense>
     </div>
   )
 }

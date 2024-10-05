@@ -6,16 +6,15 @@ import { Search, X } from 'lucide-react'
 import Link from 'next/link'
 
 
-type Props = {}
 
-const FlightsHeader = (props: Props) => {
+const FlightsHeader = () => {
   const openButton = (
-      <div className='border-[1px] text-[1rem] rounded-full w-fit px-2 border-solid border-[#E6E8EB] h-[50px] divide-x-2 flex items-center justify-start cursor-pointer'>
-        <div className='px-3 text-[16px] flex items-center gap-1'>
+      <div className='border-[1px] text-[1rem] rounded-sm py-2 md:py-0  md:rounded-full md:w-fit px-2 border-solid border-[#E6E8EB] md:h-[50px] md:divide-x-2 grid grid-cols-2 md:flex w-full items-center md:justify-start cursor-pointer'>
+        <div className='md:px-3 text-[16px] flex flex-col md:flex-row  justify-start md:items-center gap-1 p-1'>
           <span className='text-[#001F1D] font-[600]'>CDG </span>
           <span className='text-[#787B80]'>Paris Charles De Gu...</span>
         </div>
-        <div className='text-[16px] flex items-center gap-1 px-3'>
+        <div className='text-[16px] flex justify-start md:items-center gap-1 px-3 flex-col md:flex-row'>
           <span className='text-[#001F1D] font-[600]'>DXB </span>
           <span className='text-[#787B80]'>Dubai International....</span>
         </div>
@@ -31,8 +30,8 @@ const FlightsHeader = (props: Props) => {
     
   )
   return (
-    <header className='w-[75%] mx-auto py-10 flex md:flex-row flex-col-reverse justify-between items-end md:items-center'>
-        <div className='w-[60%]'>
+    <header className='md:w-[75%] mx-auto py-2 px-1 md:py-10 flex md:flex-row  flex-col-reverse justify-between items-start gap-2 md:items-center'>
+        <div className='md:w-[60%] my-5 md:my-0'>
           <SheetDrop openButton={openButton} side='top'>
             <div className='w-[75%] mx-auto grid gap-4 py-4 '>
               <SearchBox/>
