@@ -67,9 +67,16 @@ export const DropDown = ({label,data,value,onChange}:Props) => {
           aria-expanded={open}
           className="w-full justify-between text-[1rem] text-[#484A4D]"
         >
-          {value
-            ? data.find((framework) => framework.value === value)?.label
-            : `${label}`}
+          <span className="flex flex-col justify-start">
+            <span className="text-xs text-left">
+              {value && `${label}`}
+            </span>
+            <span>
+              {value
+                ? data.find((framework) => framework.value === value)?.label
+                : `${label}`}
+            </span>
+          </span>
           <ChevronDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>

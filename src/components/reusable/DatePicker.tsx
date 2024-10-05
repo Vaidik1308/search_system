@@ -22,16 +22,24 @@ export const DatePicker = ({label}:Props) => {
 
   return (
     <Popover>
-      <PopoverTrigger className="h-full" asChild>
+      <PopoverTrigger className="h-full w-full" asChild>
         <Button
           variant={"outline"}
           className={cn(
-            "w-[280px] justify-start items-center text-left font-normal",
+            "w-full justify-start md:h-full h-[60px] items-center text-left font-normal",
             !date && "text-muted-foreground"
           )}
         >
           <CalendarIcon className="mr-2 h-4 w-4" />
-          {date ? <span className="text-[1rem] mt-0.5">{format(date, "PPP")}</span> : <span className="mt-0.5 text-[1rem]">{label}</span>}
+          <span className="flex flex-col justify-start">
+            <span className="text-xs text-left">
+              {date && `${label}`}
+            </span>
+            <span>
+              {date ? <span className="text-[1rem] mt-0.5">{format(date, "PPP")}</span> : <span className="mt-0.5 text-[1rem]">{label}</span>}
+            </span>
+          </span>
+          
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-auto p-0">

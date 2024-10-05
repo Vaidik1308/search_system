@@ -11,7 +11,7 @@ const TimeLine = (props: Props) => {
             <Circle size={14}/>
             <span className='text-[#787B80] text-[12px] mt-1'>Sat 28 Sept • 2:15</span>
         </div>
-        <div className=' border-l-[2px] ml-2 border-solid border-[#000C0B] '>
+        <div className=' border-l-[2px] ml-1.5 border-solid border-[#000C0B] '>
             <div className='flex justify-between px-2 pl-[1.2rem] mb-2'>
                 <h5 className='text-[14px] text-[#001F1D] font-[500]'>DXB • Dubai International Airport</h5>
                 <div className='flex items-start gap-3'>

@@ -51,12 +51,12 @@ const  handleToChange = (value: string) => {
 
 
   return (
-    <div className="flex items-center gap-4 w-[60%]">
+    <div className="flex md:flex-row flex-col items-center gap-4 w-full md:w-[60%]">
       {/* combo box */}
       <DropDown data={airportDataFormat} value={fromLocation} onChange={handleFromChange} label="Where from?" />
       <div>
         {/* swap locations */}
-        <Button onClick={handleSwap} className="bg-[#F5F7FA] rounded-full hover:bg-[#F5F7FA] size-[3.2rem] p-0">
+        <Button onClick={handleSwap} className="bg-[#F5F7FA] rounded-full hover:bg-[#F5F7FA] size-[3.2rem] p-0 md:rotate-0 rotate-90">
           <ArrowRightLeft color="black" />
         </Button>
       </div>

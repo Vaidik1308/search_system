@@ -25,7 +25,7 @@ type Props = {
 export const  SheetDrop = ({side,children,openButton,className}:Props) => {
   return (
     <Sheet>
-        <SheetTrigger className="flex justify-center items-center" asChild>
+        <SheetTrigger className="flex justify-center items-center w-full" asChild>
             { typeof openButton === 'string' ? (  // Fixed: Added quotes around 'string'
                 <Button variant="outline">
                     {openButton}

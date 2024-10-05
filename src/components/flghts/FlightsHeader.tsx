@@ -5,6 +5,7 @@ import { Button } from '../ui/button'
 import { Search, X } from 'lucide-react'
 import Link from 'next/link'
 
+
 type Props = {}
 
 const FlightsHeader = (props: Props) => {
@@ -30,7 +31,7 @@ const FlightsHeader = (props: Props) => {
     
   )
   return (
-    <header className='w-[75%] mx-auto py-10 flex justify-between items-center'>
+    <header className='w-[75%] mx-auto py-10 flex md:flex-row flex-col-reverse justify-between items-end md:items-center'>
         <div className='w-[60%]'>
           <SheetDrop openButton={openButton} side='top'>
             <div className='w-[75%] mx-auto grid gap-4 py-4 '>

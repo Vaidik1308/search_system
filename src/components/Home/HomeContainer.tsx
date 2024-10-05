@@ -5,7 +5,7 @@ type Props = {}
 
 const HomeContainer = (props: Props) => {
   return (
-    <div className='px-5 w-[75%] mx-auto'>
+    <div className='px-5 w-[95%] mx-auto md:w-[75%] mx-auto'>
         <SearchSection/>
     </div>
   )
