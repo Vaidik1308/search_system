@@ -36,12 +36,12 @@ export const CardComp = () => {
   }, []);
 
   return (
-    <Card className="w-[400px]">
-      <CardContent className="flex flex-col items-center w-full">
-        <Image src={"/flights_logo/gif.svg"} alt="gif" width={150} height={150} />
-        <div className="w-[80%] mx-auto">
+    <Card className="w-[320px] m-0 py-1 px-1 shadow-lg">
+      <CardContent className="flex flex-col items-center w-full m-0">
+        <Image src={"/flights_logo/gif.svg"} alt="gif" width={130} height={130} />
+        <div className="w-[100%] mx-auto">
           {ticks.map((tick, index) => (
-            <div key={index} className="flex items-center gap-4 p-0.5 justify-start">
+            <div key={index} className="flex items-center gap-4 w-full p-0.5 justify-start">
               {loading && !tick ? (
                 <ClipLoader size={14} color="#3A6889" />
               ) : (

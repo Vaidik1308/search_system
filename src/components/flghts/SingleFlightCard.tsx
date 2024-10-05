@@ -42,7 +42,7 @@ const openButton = (
                     <div className='relative'>
                         <p className='text-[#787B80] text-[13px]'>Lufthansa • AT 4334</p>
                         <h6 className='text-[#001F1D] text-[18px]'>9:45 AM - 11:45 AM</h6>
-                        <span className='absolute  text-[#962828F9] text-[12px] font-[500] top-0 right-0   md:-right-[28%] md:bottom-[20%]'>+1 day</span>
+                        <span className='absolute  text-[#962828F9] text-[12px] font-[500] top-0 right-0 md:top-[45%]   md:-right-[28%] md:bottom-[20%]'>+1 day</span>
                     </div>
                 </div>
                 <div className='flex justify-start md:justify-between items-start divide-x-2 md:divide-x-0 md:items-end gap-2 md:gap-10 w-full md:w-1/3'>
